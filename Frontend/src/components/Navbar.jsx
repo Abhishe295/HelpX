@@ -54,7 +54,7 @@ const Navbar = () => {
           className="flex items-center gap-2 text-xl sm:text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent hover:scale-105 transition-transform duration-200"
         >
           <Handshake className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
-          <span className="hidden sm:inline">HelperHub</span>
+          <span className="hidden sm:inline">HelpX</span>
           <span className="sm:hidden">HH</span>
         </Link>
       </div>
