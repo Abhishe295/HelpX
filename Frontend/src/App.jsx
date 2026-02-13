@@ -9,6 +9,7 @@ import UserPage from "./pages/UserPage";
 import HelperPage from "./pages/HelperPage";
 import AdminPage from "./pages/AdminPage";
 import { useThemeStore } from "./lib/useTheme.js";
+import ThemePage from "./pages/ThemePage.jsx";
 
 function App() {
   const { checkAuth } = useAuthStore();
@@ -19,7 +20,7 @@ function App() {
   }, []);
 
   return (
-    <div data-theme={theme}>
+    <div data-theme={theme} className="min-h-screen">
     <Layout>
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -27,6 +28,7 @@ function App() {
         <Route path="/user" element={<UserPage />} />
         <Route path="/helper" element={<HelperPage />} />
         <Route path="/admin" element={<AdminPage />} />
+        <Route path='/theme' element={<ThemePage/>}/>
       </Routes>
     </Layout>
     </div>

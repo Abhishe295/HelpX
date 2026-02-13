@@ -19,6 +19,8 @@ dotenv.config();
 connectDB();
 
 const app = express();
+const server = http.createServer(app);
+initSocket(server);
 
 app.use(express.json());
 app.use(cookieParser());
@@ -41,8 +43,7 @@ app.use("/api/admin",adminRoutes);
 
 app.use(errorHandler);
 
-const server = http.createServer(app);
-initSocket(server);
+
 
 const io = new Server(server, {
   cors: {
